@@ -1,0 +1,12 @@
+.DS_Store
+.gradle
+.idea
+out
+*.iml
+
+kotlin/.DS_Store
+kotlin/.gradle
+kotlin/.idea
+kotlin/out
+kotlin/*.iml
+
