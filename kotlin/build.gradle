@@ -14,7 +14,7 @@ buildscript {
 
 apply plugin: 'kotlin'
 
-group 'kotlin.research.kakkki'
+group 'my.leet.code.kotlin.kakkki'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
