@@ -6,7 +6,7 @@ class Solution {
             nums.forEachIndexed { index1, data1 ->
                 run loopSecond@ {
                     nums.forEachIndexed { index2, data2 ->
-                        if (data1 + data2 == target) {
+                        if (data1 + data2 == target && index1 != index2) {
                             result.apply {
                                 set(0, index1)
                                 set(1, index2)
@@ -20,8 +20,6 @@ class Solution {
                 if (isFinished) return@loopFirst
             }
         }
-        println("index1: ${result.get(0)}")
-        println("index2: ${result.get(1)}")
         return result
     }
 }
