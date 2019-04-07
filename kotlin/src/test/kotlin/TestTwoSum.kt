@@ -1,7 +1,7 @@
 import org.junit.Assert
 import org.junit.Test
 
-class TwoSum {
+class TestTwoSum {
 
     @Test
     fun `sum_is_9`() {
@@ -12,7 +12,7 @@ class TwoSum {
             set(2, 11)
             set(3, 15)
         }
-        val result = Solution().twoSum(inputNums, target)
+        val result = TwoSum().solve(inputNums, target)
         Assert.assertEquals(
             inputNums.get(result.get(0))
                     + inputNums.get(result.get(1)),
@@ -28,7 +28,7 @@ class TwoSum {
             set(1, 2)
             set(2, 4)
         }
-        val result = Solution().twoSum(inputNums, target)
+        val result = TwoSum().solve(inputNums, target)
         Assert.assertEquals(
             inputNums.get(result.get(0))
                     + inputNums.get(result.get(1)),
@@ -49,7 +49,7 @@ class TwoSum {
             set(2, 5)
             set(3, 11)
         }
-        val result = Solution().twoSum(inputNums, target)
+        val result = TwoSum().solve(inputNums, target)
         Assert.assertEquals(
             inputNums.get(result.get(0))
                     + inputNums.get(result.get(1)),
@@ -58,6 +58,29 @@ class TwoSum {
         Assert.assertNotEquals(
             0,
             result.get(0) - result.get(1)
+        )
+    }
+
+    @Test
+    fun `sum_is_31`() {
+        val target = 31
+        val inputNums = IntArray(8).apply {
+            set(0, 100)
+            set(1, 100)
+            set(2, 100)
+            set(3, 100)
+            set(4, 14)
+            set(5, 100)
+            set(6, 100)
+            set(7, 17)
+        }
+        val result = TwoSum().solve(inputNums, target)
+        println("result.get(0) : ${result.get(0)}")
+        println("result.get(1) : ${result.get(1)}")
+        Assert.assertEquals(
+            inputNums.get(result.get(0))
+                    + inputNums.get(result.get(1)),
+            target
         )
     }
 
